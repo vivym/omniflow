@@ -1,5 +1,7 @@
 import formsPlugin from '@tailwindcss/forms'
+import flowbitePlugin from 'flowbite/plugin'
 import headlessuiPlugin from '@headlessui/tailwindcss'
+import plugin from 'tailwindcss/plugin'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -7,6 +9,7 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     fontSize: {
@@ -35,8 +38,28 @@ const config: Config = {
       maxWidth: {
         '2xl': '40rem',
       },
+      textShadow: {
+        sm: '0 1px 2px var(--tw-shadow-color)',
+        DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+        lg: '0 8px 16px var(--tw-shadow-color)',
+      }
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [
+    formsPlugin,
+    flowbitePlugin,
+    headlessuiPlugin,
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          'text-shadow': (value) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 }
+
 export default config
