@@ -1,4 +1,7 @@
+import '@vime/core/themes/default.css'
+import '@vime/core/themes/light.css'
 import './globals.css'
+
 import clsx from 'clsx'
 import type { Metadata } from 'next'
 import { Inter, Lexend } from 'next/font/google'

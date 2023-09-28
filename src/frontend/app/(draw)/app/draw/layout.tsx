@@ -4,7 +4,7 @@ export default function DrawLayout({ children }: { children: React.ReactNode }) 
   return (
     <div>
       <Sidebar />
-      <main className="py-10 lg:pl-80 flex">
+      <main className="lg:ml-80 flex">
         {children}
       </main>
     </div>

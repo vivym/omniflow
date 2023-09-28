@@ -37,8 +37,6 @@ export function ResolutionSelector() {
   const setHeight = useBoundStore((state) => state.setHeight)
   const setWidth = useBoundStore((state) => state.setWidth)
 
-  console.log('height', height, 'width', width, width < minWidth || width > maxWidth)
-
   const [resolutionCandidates, setResolutionCandidates] = useState<{ width: number, height: number }[]>(
     resolutionCandidatesList[0]
   )
