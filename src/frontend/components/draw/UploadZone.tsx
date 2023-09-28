@@ -1,10 +1,10 @@
-import clsx from 'clsx'
-import Image from 'next/image'
-import { useCallback, useState } from 'react'
-import { useDropzone } from 'react-dropzone'
-import { Button } from 'flowbite-react'
 import { PhotoIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { SparklesIcon } from '@heroicons/react/24/solid'
+import clsx from 'clsx'
+import { Button } from 'flowbite-react'
+import Image from 'next/image'
+import { useCallback } from 'react'
+import { useDropzone } from 'react-dropzone'
 import { useBoundStore } from '@/lib/store'
 
 export function UploadZone({ index }: { index: number }) {

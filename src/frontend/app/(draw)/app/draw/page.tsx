@@ -1,10 +1,10 @@
 'use client'
 
+import { Switch, Tab } from '@headlessui/react'
 import clsx from 'clsx'
 import { Button, Textarea } from 'flowbite-react'
-import { Switch, Tab } from '@headlessui/react'
-import { UploadZone } from '@/components/draw/UploadZone'
 import { ResultPanel } from '@/components/draw/ResultPanel'
+import { UploadZone } from '@/components/draw/UploadZone'
 import { useBoundStore } from '@/lib/store'
 
 const tabs = [
@@ -32,7 +32,7 @@ const ToggleSwitch = ({
       <Switch
         className={clsx(
           checked ? 'bg-indigo-600' : 'bg-gray-200',
-          'relative inline-flex h-5 w-8 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none'
+          'relative inline-flex h-5 w-8 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none'
         )}
         checked={checked}
         onChange={setChecked}
@@ -40,7 +40,7 @@ const ToggleSwitch = ({
         <span
           className={clsx(
             checked ? 'translate-x-3' : 'translate-x-0',
-            'pointer-events-none relative inline-block h-4 w-4 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
+            'pointer-events-none relative inline-block h-4 w-4 rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
           )}
         >
           <span

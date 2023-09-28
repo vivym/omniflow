@@ -2,6 +2,7 @@ import formsPlugin from '@tailwindcss/forms'
 import flowbitePlugin from 'flowbite/plugin'
 import headlessuiPlugin from '@headlessui/tailwindcss'
 import plugin from 'tailwindcss/plugin'
+import defaultTheme from 'tailwindcss/defaultTheme'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -35,6 +36,12 @@ const config: Config = {
         sans: 'var(--font-inter)',
         display: 'var(--font-lexend)',
       },
+      minHeight: {
+        ...defaultTheme.height,
+      },
+      minWidth: {
+        ...defaultTheme.width,
+      },
       maxWidth: {
         '2xl': '40rem',
       },
@@ -60,6 +67,9 @@ const config: Config = {
       )
     }),
   ],
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
 }
 
 export default config

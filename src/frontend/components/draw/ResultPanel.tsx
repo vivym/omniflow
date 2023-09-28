@@ -1,11 +1,11 @@
 'use client'
 
+import { RadioGroup } from '@headlessui/react'
+import { ListBulletIcon, Squares2X2Icon, SquaresPlusIcon } from '@heroicons/react/24/outline'
+import { Player, Ui, Video } from '@vime/react'
 import clsx from 'clsx'
 import Image from 'next/image'
 import { useState } from 'react'
-import { RadioGroup } from '@headlessui/react'
-import { Player, Ui, Video } from '@vime/react'
-import { Squares2X2Icon, SquaresPlusIcon, ListBulletIcon } from '@heroicons/react/24/outline'
 import { useBoundStore } from '@/lib/store'
 
 const results = [
@@ -64,8 +64,6 @@ export function ResultPanel() {
   const width = useBoundStore((state) => state.width)
   const [viewMode, setViewMode] = useState('auto')
 
-  console.log('viewMode', viewMode)
-
   return (
     <div className="flex flex-col">
       <div className="flex items-center justify-between mt-2 mb-4">
@@ -81,8 +79,8 @@ export function ResultPanel() {
                     clsx(
                       'relative flex cursor-pointer flex-col border p-2 focus:outline-none',
                       checked ? 'z-10 border-indigo-200 bg-indigo-50' : 'border-gray-200',
-                      i === 0 && 'rounded-tl-md rounded-bl-md',
-                      i === viewModes.length - 1 && 'rounded-tr-md rounded-br-md',
+                      i === 0 && 'rounded-l-md',
+                      i === viewModes.length - 1 && 'rounded-r-md',
                     )
                   }
                   value={viewMode.title}

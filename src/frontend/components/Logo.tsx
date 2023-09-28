@@ -1,5 +1,5 @@
-import type { ComponentPropsWithoutRef } from 'react'
 import Image from 'next/image'
+import type { ComponentPropsWithoutRef } from 'react'
 import logoIcon from '@/public/logo.svg'
 
 export function Logo(props: ComponentPropsWithoutRef<'div'>) {

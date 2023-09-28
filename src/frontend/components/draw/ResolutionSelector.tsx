@@ -1,8 +1,8 @@
 'use client'
 
 import clsx from 'clsx'
-import { useState } from 'react'
 import { Button, RangeSlider } from 'flowbite-react'
+import { useState } from 'react'
 import { useBoundStore } from '@/lib/store'
 
 const resolutionCandidatesList = [

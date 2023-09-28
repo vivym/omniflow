@@ -1,6 +1,6 @@
+import { PlayIcon } from '@heroicons/react/20/solid'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { PlayIcon } from '@heroicons/react/20/solid'
 
 export function Hero() {
   return (

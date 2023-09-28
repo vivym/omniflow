@@ -1,12 +1,12 @@
 'use client'
 
+import { Dialog, Transition } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { HeartIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
+import { Button } from 'flowbite-react'
 import Image from 'next/image'
 import { Fragment, useState } from 'react'
-import { Button } from 'flowbite-react'
-import { Dialog, Transition } from '@headlessui/react'
-import { HeartIcon } from '@heroicons/react/24/solid'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Logo } from '@/components/Logo'
 import { useBoundStore } from '@/lib/store'
 import { ResolutionSelector } from './ResolutionSelector'
@@ -49,7 +49,7 @@ export function SidebarComponents({ isDesktop }: { isDesktop: boolean }) {
   return (
     <div className="flex flex-col grow gap-y-5 border-r border-gray-200 bg-white px-6">
       {/* Logo */}
-      <div className="flex pt-8 pb-8 shrink-0 items-center border-b">
+      <div className="flex py-8 shrink-0 items-center border-b">
         <Logo className="h-12 w-auto" />
       </div>
 
@@ -164,7 +164,7 @@ export function Sidebar() {
         </Dialog>
       </Transition.Root>
 
-      <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-white px-4 py-4 shadow-sm sm:px-6 lg:hidden">
+      <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-white p-4 shadow-sm sm:px-6 lg:hidden">
         <button type="button" className="-m-2.5 p-2.5 text-gray-700 lg:hidden" onClick={() => setSidebarOpen(true)}>
           <span className="sr-only">Open sidebar</span>
           <Bars3Icon className="h-6 w-6" aria-hidden="true" />

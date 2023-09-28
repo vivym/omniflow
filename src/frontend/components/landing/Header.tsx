@@ -1,9 +1,9 @@
 'use client'
 
+import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
 import { Logo } from '@/components/Logo'
 import { NavLink } from '../NavLink'
 

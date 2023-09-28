@@ -1,7 +1,7 @@
-import Link from 'next/link'
 import Image from 'next/image'
-import { Logo } from '@/components/Logo'
+import Link from 'next/link'
 import backgroundImage from '@/assets/background-login.avif'
+import { Logo } from '@/components/Logo'
 
 export default function LoginPage() {
   return (
